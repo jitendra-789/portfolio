@@ -9,7 +9,25 @@ import { Contact } from "./components/sections/Contact";
 import { Particles } from "./components/ui/Particles";
 import { NoiseOverlay } from "./components/ui/NoiseOverlay";
 
+import { useEffect } from "react";
+
 export default function App() {
+  useEffect(() => {
+    // Force the title to update (bypassing any cached index.html title)
+    document.title = "jitendrakolli";
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        document.title = "Come back soon! 🚀 - jitendrakolli";
+      } else {
+        document.title = "jitendrakolli";
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-background selection:bg-white/20 selection:text-white">
       
