@@ -28,6 +28,13 @@
     0%, 100% { opacity: 0.4; }
     50% { opacity: 0.8; }
   }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.05; }
+    50% { opacity: 1; }
+  }
+
+  --animate-twinkle: twinkle 3s ease-in-out infinite;
 }
 
 @layer base {

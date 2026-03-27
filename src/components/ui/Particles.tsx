@@ -26,7 +26,7 @@ export function Particles() {
       {stars.map((s) => (
         <div
           key={s.id}
-          className="absolute rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,1)] animate-pulse-slow"
+          className="absolute rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,1)] animate-twinkle"
           style={{
             left: `${s.x}vw`,
             top: `${s.y}vh`,
