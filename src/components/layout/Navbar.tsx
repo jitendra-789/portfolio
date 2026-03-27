@@ -178,7 +178,7 @@ export function Navbar() {
       <a
         href="/Resume.pdf"
         download
-        className="fixed bottom-6 right-6 md:bottom-auto md:top-7 md:right-6 z-50 text-sm font-bold text-white/80 bg-black/80 md:bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full transition-all border border-white/10 hover:border-white/30 hover:bg-white/10 hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+        className="fixed bottom-6 right-6 md:bottom-auto md:top-7 md:right-6 z-50 text-sm font-bold text-black bg-white px-5 py-2.5 rounded-full transition-all border border-white/20 shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 active:scale-95"
       >
         Résumé
       </a>
