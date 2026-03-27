@@ -102,7 +102,17 @@ export function Navbar() {
               );
             })}
             
-            <MagneticButton className="ml-4">
+            <MagneticButton className="ml-2">
+              <a
+                href="/Resume.pdf"
+                download
+                className="inline-block text-sm font-bold text-white/80 bg-white/5 px-5 py-2.5 rounded-full transition-all outline-none border border-white/10 hover:border-white/30 hover:bg-white/10 hover:text-white"
+              >
+                Résumé
+              </a>
+            </MagneticButton>
+
+            <MagneticButton className="ml-2">
               <a
                 href="#contact"
                 onClick={(e) => {
@@ -158,6 +168,14 @@ export function Navbar() {
                 );
               })}
               <div className="h-px bg-white/10 my-2" />
+              <a
+                href="/Resume.pdf"
+                download
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-base font-medium text-white/80 px-4 py-3 rounded-xl text-center hover:bg-white/5 hover:text-white transition-colors"
+              >
+                Résumé ↓
+              </a>
               <a
                 href="#contact"
                 onClick={(e) => {
