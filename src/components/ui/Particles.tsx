@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 export function Particles() {
   const [stars, setStars] = useState<
@@ -7,8 +6,9 @@ export function Particles() {
   >([]);
 
   useEffect(() => {
-    // Generate 150 static twinkling stars
-    const generated = Array.from({ length: 150 }).map((_, i) => ({
+    // Determine number of stars based on screen size to save mobile CPU
+    const starCount = window.innerWidth < 768 ? 50 : 150;
+    const generated = Array.from({ length: starCount }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -22,23 +22,18 @@ export function Particles() {
   return (
     <div className="fixed inset-0 pointer-events-none z-[1] overflow-hidden isolate">
       
-      {/* ⭐ Twinkling Stars */}
+      {/* ⭐ Twinkling Stars built with pure CSS to save JS/Framer-Motion processing */}
       {stars.map((s) => (
-        <motion.div
+        <div
           key={s.id}
-          className="absolute rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,1)]"
+          className="absolute rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,1)] animate-pulse-slow"
           style={{
             left: `${s.x}vw`,
             top: `${s.y}vh`,
             width: s.size,
             height: s.size,
-          }}
-          animate={{ opacity: [0.1, 1, 0.1] }}
-          transition={{
-            duration: s.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: s.delay,
+            animationDuration: `${s.duration}s`,
+            animationDelay: `${s.delay}s`,
           }}
         />
       ))}

@@ -27,8 +27,8 @@ export default function App() {
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-0" />
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.15),transparent_60%)] animate-blob" />
-        <div className="absolute top-[20%] right-[-10%] w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15),transparent_60%)] animate-blob" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_60%)] animate-blob" style={{ animationDelay: '4s' }} />
+        <div className="hidden md:block absolute top-[20%] right-[-10%] w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15),transparent_60%)] animate-blob" style={{ animationDelay: '2s' }} />
+        <div className="hidden md:block absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_60%)] animate-blob" style={{ animationDelay: '4s' }} />
       </div>
 
       <Particles />
