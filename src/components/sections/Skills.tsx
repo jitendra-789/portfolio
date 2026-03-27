@@ -4,11 +4,11 @@ import { Card } from "../ui/Card";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "C/C++", "SQL", "TypeScript"],
+    skills: ["Python", "C/C++", "SQL"],
   },
   {
     title: "Backend & Systems",
-    skills: ["REST APIs", "Flask", "Node.js", "Asynch Processing"],
+    skills: ["REST APIs", "Flask", "Node.js", "Async Processing"],
   },
   {
     title: "Machine Learning",
