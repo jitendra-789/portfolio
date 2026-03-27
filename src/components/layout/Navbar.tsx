@@ -48,8 +48,8 @@ export function Navbar() {
           className={cn(
             "pointer-events-auto flex items-center space-x-2 md:space-x-1 rounded-full px-4 md:px-6 py-2.5 md:py-3 transition-all duration-500 border",
             isScrolled 
-              ? "glass border-surface-border bg-black/60 shadow-[0_8px_32px_rgba(0,0,0,0.8)] backdrop-blur-3xl" 
-              : "bg-surface border-surface-border backdrop-blur-xl"
+              ? "glass border-surface-border bg-black/90 md:bg-black/60 shadow-[0_8px_32px_rgba(0,0,0,0.8)] backdrop-blur-3xl" 
+              : "bg-surface border-surface-border backdrop-blur-xl bg-black/60 md:bg-transparent"
           )}
         >
           <a 
@@ -124,7 +124,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="pointer-events-auto md:hidden absolute top-[70px] left-6 right-6 p-4 glass border border-white/10 rounded-3xl flex flex-col space-y-2 origin-top shadow-2xl shadow-black/50"
+              className="pointer-events-auto md:hidden absolute top-[70px] left-6 right-6 p-4 glass bg-black/95 border border-white/10 rounded-3xl flex flex-col space-y-2 origin-top shadow-2xl shadow-black/50"
             >
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.substring(1);
