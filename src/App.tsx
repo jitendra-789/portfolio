@@ -11,6 +11,8 @@ import { NoiseOverlay } from "./components/ui/NoiseOverlay";
 
 import { useEffect } from "react";
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function App() {
   useEffect(() => {
     // Force the title to update (bypassing any cached index.html title)
@@ -45,6 +47,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <Analytics />
     </div>
   );
 }
