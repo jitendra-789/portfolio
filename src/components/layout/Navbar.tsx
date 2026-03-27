@@ -68,6 +68,11 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.querySelector(link.href);
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   className={cn(
                     "relative px-4 md:px-5 py-2 text-sm font-medium transition-colors rounded-full",
                     isActive ? "text-white" : "text-white/60 hover:text-white"
@@ -100,6 +105,11 @@ export function Navbar() {
             <MagneticButton className="ml-4">
               <a
                 href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.querySelector("#contact");
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="inline-block text-sm font-bold text-black bg-white px-6 py-2.5 rounded-full transition-all outline-none border border-transparent hover:border-white hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] hover:bg-black hover:text-white"
               >
                 Contact
@@ -132,7 +142,12 @@ export function Navbar() {
                   <a
                     key={link.name}
                     href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setMobileMenuOpen(false);
+                      const el = document.querySelector(link.href);
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className={cn(
                       "text-base font-medium px-4 py-3 rounded-xl transition-colors",
                       isActive ? "bg-white/10 text-white" : "text-white/80 hover:text-white hover:bg-white/5"
@@ -145,7 +160,12 @@ export function Navbar() {
               <div className="h-px bg-white/10 my-2" />
               <a
                 href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMobileMenuOpen(false);
+                  const el = document.querySelector("#contact");
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="text-base font-bold text-black bg-white px-4 py-3 rounded-xl text-center hover:bg-black hover:text-white border border-transparent hover:border-white transition-all shadow-lg"
               >
                 Contact Me
