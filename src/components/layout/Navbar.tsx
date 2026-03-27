@@ -174,11 +174,11 @@ export function Navbar() {
         </AnimatePresence>
       </header>
 
-      {/* Floating Résumé Button - Fixed top-right corner */}
+      {/* Floating Résumé Button - bottom-right on mobile, top-right on desktop */}
       <a
         href="/Resume.pdf"
         download
-        className="fixed top-7 right-6 z-50 text-sm font-bold text-white/80 bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full transition-all border border-white/10 hover:border-white/30 hover:bg-white/10 hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+        className="fixed bottom-6 right-6 md:bottom-auto md:top-7 md:right-6 z-50 text-sm font-bold text-white/80 bg-black/80 md:bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full transition-all border border-white/10 hover:border-white/30 hover:bg-white/10 hover:text-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
       >
         Résumé
       </a>
